@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Patricio Agustín Jimenez Paz">
+    <meta name="description" content="Formulario accesible">
+    <title>Formulario accesible</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+<body>
+    <nav class="navAccesibilidad">
+        <ul class="flexContainer noDots">
+            <li class="accesibilidadItem"><a href="#contenido" class="saltarContenido">Saltar al contenido</a></li>
+        </ul>
+    </nav>
+    <main id="contenido">
+        <section>
+            <form action="#" method="post">
+                <fieldset class="flexContainer fieldsetContenedor noMarginTop fontColor">
+                    <legend class="titulo"><h1>Encuesta</h1></legend>
+                    <fieldset class="datosPersonales noMarginTop flexContainer formSections">
+                        <legend>Datos personales</legend>
+                        <label for="nombre">Nombre:
+                            <input type="text" name="nombre" id="nombre" required maxlength="50" placeholder="Ingrese su nombre">
+                        </label>
+                        <label for="email">Mail:
+                            <input type="email" name="email" id="email" required placeholder="Ingrese su casilla de mail">
+                        </label>
+                        <label for="fechaNacimiento">Fecha de nacimiento:
+                            <input type="date" name="fechaNacimiento" id="fechaNacimiento" value="2020-01-01">
+                        </label>
+                        <label for="celular">Celular (con código de área, sin 0 ni 15):
+                            <input type="tel" name="celular" id="celular" pattern="[0-9]{10}" maxlength="10" placeholder="3810000000">
+                        </label>
+                    </fieldset>
+                    <fieldset class="sobreCarrera flexContainer formSections">
+                        <legend>Sobre la carrera</legend>
+                        <label for="carrera">Indique en la carrera que se inscribió originalmente:
+                            <select name="carrera" id="carrera">
+                                <option value="PU">Programador Universitario</option>
+                                <option value="LicInf">Licenciatura en Informática</option>
+                                <option value="IngInf">Ingeniería en Informática</option>
+                            </select>
+                        </label>
+                        <label for="recusante">Recursa la carrera?
+                            <div class="recursantes-si">
+                                <input type="radio" name="recursante" id="recursa-si" value="si">
+                                <label for="recursa-si">Si</label>
+                            </div>
+                            <div class="recursantes-no">
+                                <input type="radio" name="recursante" id="recursa-no" value="no" checked>
+                                <label for="recursa-no">No</label>
+                            </div>
+                        </label>
+                        <label for="materias">Materias que cursa:
+                            <div class="algebra">
+                                <input type="checkbox" name="materias" id="algebra" value="algebra"><label for="algebra">Álgebra</label>
+                            </div>
+                            <div class="calculo">
+                                <input type="checkbox" name="materias" id="calculo" value="calculo"><label for="calculo">Cálculo I</label>
+                            </div>
+                            <div class="laboratorio">
+                                <input type="checkbox" name="materias" id="laboratorio" value="laboratorio" checked><label for="laboratorio">Laboratorio I</label>
+                            </div>
+                            <div class="elementosComputacion">
+                                <input type="checkbox" name="materias" id="elementos" value="elementos"><label for="elementos">Elementos de computación y lógica</label>
+                            </div>
+                            <div class="otras">
+                                <input type="checkbox" name="materias" id="otras" value="otras"><label for="otras">Otras</label>
+                            </div>
+                        </label>
+                    </fieldset>
+                    <fieldset class="sobreMateria flexContainer formSections">
+                        <legend>Sobre la materia</legend>
+                        <label for="diaYHorario">Indique el horario de la comisión práctica a la que asiste
+                            <label for="dia">Día:
+                                <select name="dia" id="dia">
+                                    <option value="Jueves">Jueves</option>
+                                    <option value="Viernes">Viernes</option>
+                                </select>
+                            </label>
+                            <label for="hora">Hora:
+                                <input type="time" name="hora" id="hora">
+                            </label>
+                        </label>
+                        <label for="satisfaccion">Indique el grado de satisfacción respecto a la materia (bajo)
+                            <input type="range" name="nivelSatisfaccion" id="satisfaccion" min="0" max="100" step="5">(alto)
+                        </label>
+                        <label for="dictadoMateria">Del 1 al 10 como calificaría al dictado de la materia?
+                            <input type="number" name="dictadoMateria" id="dictadoMateria" min="1" max="10" value="5" required>
+                        </label>
+                    </fieldset>
+                    <div class="buttonsContainer flexContainer formSections">
+                        <input type="submit" value="Enviar">
+                        <input type="reset" value="Limpiar">
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

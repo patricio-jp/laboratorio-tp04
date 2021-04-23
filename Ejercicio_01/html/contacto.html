@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Counter Strike: Global Offensive</title>
+    <meta name="author" content="Patricio Agustín Jimenez Paz">
+    <meta name="description" content="Counter-Strike: Global Offensive (CS:GO) es un videojuego de disparos en primera persona (FPS) desarrollado por Valve Corporation en cooperación con Hidden Path Entertainment, y es el cuarto juego de la saga Counter-Strike">
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+    <nav class="navAccesibilidad">
+        <ul class="flexContainer noDots">
+            <li class="accesibilidadItem"><a href="#contenido" class="fontColor links">Saltar al contenido</a></li>
+            <li class="accesibilidadItem"><a href="#navegacion" class="fontColor links">Saltar a navegación</a></li>
+        </ul>
+    </nav>
+    <header class="flexContainer fontColor">
+        <figure>
+            <img src="../img/csgo-logo.png" alt="Logo">
+        </figure>
+        <h1>Counter-Strike: Global Offensive - Contacto</h1>
+    </header>
+    <nav id="navegacion">
+        <ul class="flexContainer noDots">
+            <li class="navegacionItem"><a href="../index.html" class="fontColor links">Inicio</a></li>
+            <li class="navegacionItem"><a href="./multimedia.html" class="fontColor links">Galería</a></li>
+            <li class="navegacionItem"><a href="./contacto.html" class="fontColor links">Contacto</a></li>
+        </ul>
+    </nav>
+    <section class="flexContainer mainContainer">
+        <main id="contenido">
+            <section>
+                <article>
+                    <form action="#" method="post" class="fontColor">
+                        <fieldset class="formulario">
+                            <legend class="noMarginTop">Contacto</legend>
+                            <label for="nombre">Nombre:
+                                <input type="text" name="nombre" id="nombre" placeholder="Juan Pérez" required>
+                            </label>
+                            <label for="email">Email:
+                                <input type="email" name="email" id="email" placeholder="email@example.com" required>
+                            </label>
+                            <label for="novedades">¿Desea recibir novedades o promociones del juego?
+                                <div class="novedadesInputContainer">
+                                    <input type="radio" name="novedades" id="novedades-si" value="si" required>
+                                    <label for="novedades-si">SI</label>
+                                    <input type="radio" name="novedades" id="novedades-no" value="no">
+                                    <label for="novedades-no">NO</label>
+                                </div>
+                            </label>
+                            <label for="mensaje">Su Mensaje:
+                                <textarea name="mensaje" id="mensaje" cols="100" rows="10" placeholder="Escriba su mensaje..." required></textarea>
+                            </label>
+                            <div class="botones">
+                                <input type="reset" value="Limpiar">
+                                <input type="submit" value="Enviar">
+                            </div>
+                        </fieldset>
+                    </form>
+                </article>
+            </section>
+        </main>
+        <aside>
+            <section>
+                <article class="fontColor">
+                    <h2 class="noMarginTop">Juegos similares</h2>
+                    <section class="relatedGames flexContainer">
+                        <a href="https://playvalorant.com/en-us/" target="_blank" class="noMarginTop fontColor">
+                            <figure>
+                                <img src="../img/valorant.jpg" alt="Valorant">
+                                <figcaption>Valorant</figcaption>
+                            </figure>
+                        </a>
+                        <a href="https://www.ubisoft.com/es-mx/game/rainbow-six/siege" target="_blank" class="fontColor">
+                            <figure>
+                                <img src="../img/rainbowsix-siege.jpg" alt="Tom Clancy's Rainbow Six Siege">
+                                <figcaption>Tom Clancy's Rainbow Six &reg Siege</figcaption>
+                            </figure>
+                        </a>
+                    </section>
+                </article>
+            </section>
+        </aside>
+    </section>
+    <footer>
+        <section class="flexContainer">
+            <a href="https://blog.counter-strike.net/es/" target="_blank" class="fontColor">CS:GO - Página oficial</a>
+            <a href="mailto:patojimenezpaz@gmail.com" class="fontColor">Contacto vía mail</a>
+        </section>
+    </footer>
+</body>
+</html>
